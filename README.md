@@ -1,2 +1,2 @@
 # HPC_scripts
-Templates for Running Simulations on HPC Systems
+Templates for running simulations on HPC systems
