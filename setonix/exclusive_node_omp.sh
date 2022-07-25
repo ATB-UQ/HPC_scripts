@@ -15,7 +15,7 @@
 #SBATCH --cpus-per-task=128
 #SBATCH --time=01:00:00
 #SBATCH --exclusive
-#exclusive flag uses entire node
+# Exclusive flag uses entire node
  
 # ---
 # Load here the needed modules
@@ -29,4 +29,4 @@ export OMP_PLACES=cores     #To bind threads to cores
 # ---
 # Run the desired code:
 srun ./code_omp.x
-#Note that no further details need to be given to srun, as it will take the settings from the allocation indicated in the header.
+# Note that no further details need to be given to srun, as it will take the settings from the allocation indicated in the header.
