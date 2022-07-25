@@ -13,7 +13,7 @@
 #SBATCH --ntasks=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=32
-# use multiples of 8 CPUs (the number of cores per chiplet of the processor) for best L3 cache utilisation
+# Use multiples of 8 CPUs (the number of cores per chiplet of the processor) for best L3 cache utilisation
 #SBATCH --mem=57440M
 # --mem specifies total memory for the job
 # --mem-per-cpu is not recommended on Setonix as it can create allocation problems
