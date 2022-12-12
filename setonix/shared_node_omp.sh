@@ -18,6 +18,8 @@
 # --mem specifies total memory for the job
 # --mem-per-cpu is not recommended on Setonix as it can create allocation problems
 #SBATCH --time=01:00:00
+#SBATCH --distribution=block:block:block
+# block:block:block option packs threads into contiguous cores
  
 # ---
 # Load here the needed modules
@@ -30,5 +32,4 @@ export OMP_PLACES=cores     #To bind threads to cores
  
 # ---
 # Run the desired code:
-srun –m block:block:block ./code_omp.x
-# -m block:block:block option packs threads into contiguous cores
+srun ./code_omp.x
