@@ -10,8 +10,8 @@
 #SBATCH --account=<ACCOUNT>-gpu
 
 module load gromacs-amd-gfx90a/2023
+
+export OMP_NUM_THREADS=8
 export GMX_MAXBACKUP=-1
 
-unset OMP_NUM_THREADS
-
-srun -l -u -c 8 gmx_mpi mdrun <ARGS> -nb gpu -bonded gpu -pin on -update gpu -ntomp 8 -ntmpi 1
+srun -l -u -N 1 -n 1 -c 8 --gpus-per-node=1 --gpus-per-task=1 gmx_mpi mdrun <ARGS> -nb gpu -bonded gpu
