@@ -9,11 +9,7 @@
 #SBATCH --time=01:00:00
 #SBATCH --account=<ACCOUNT>-gpu
 
-module load PrgEnv-cray
-module load rocm craype-accel-amd-gfx90a
-
-module load gcc/12.1.0
-module load gromacs-amd-gfx90a/2022.3.amd1_174
+module load gromacs-amd-gfx90a/2023
 export GMX_MAXBACKUP=-1
 
 unset OMP_NUM_THREADS
