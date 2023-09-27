@@ -14,4 +14,4 @@ export GMX_MAXBACKUP=-1
 
 unset OMP_NUM_THREADS
 
-srun -l -u -c 8 gmx mdrun <ARGS> -nb gpu -bonded gpu -pin on -update gpu -ntomp 8 -ntmpi 1
+srun -l -u -c 8 gmx_mpi mdrun <ARGS> -nb gpu -bonded gpu -pin on -update gpu -ntomp 8 -ntmpi 1
