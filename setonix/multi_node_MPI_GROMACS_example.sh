@@ -8,7 +8,7 @@
 #SBATCH --exclusive
 #SBATCH --time=10:00:00
 
-module load gromacs/2021.4
+module load gromacs/2023
 #export GMX_MAXBACKUP=-1
 
 # Temporal workaround for avoiding Slingshot issues on shared nodes:
